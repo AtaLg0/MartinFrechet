@@ -1,0 +1,208 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-image: url('backgroundNAV.png');
+    background-size: cover;
+}
+
+/* Style du header */
+header {
+    display: flex;
+    align-items: center; /* Centre verticalement le contenu */
+    justify-content: space-between;
+    color: #000000;
+}
+
+/* Style du logo */
+.logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%; /* Pour créer un effet de cercle pour le logo */
+    margin-left: 30px;
+    transition: transform 0.2s;
+}
+
+.logo img:hover {
+    transform: scale(1.5); /* Grossissement de 10% lors du survol */
+}
+
+
+
+
+/* Style du nom */
+.nom h1 {
+    font-size: 50px;
+    font-family: "Arial Black", sans-serif; /* Utilise la police "Arial Black" si disponible, sinon une police sans sérif générique */
+    font-style: italic; /* Police italique */
+    font-weight: bold; /* Texte en gras */
+}
+
+
+/* Style du logo de spotify uniquement */
+.reseaux-sociaux li img {
+    width: 30px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Conservez les proportions de l'image */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.reseaux-sociaux li {
+    display: inline;
+}
+
+.reseaux-sociaux img:hover {
+    transform: scale(1.5); /* Grossissement de 10% lors du survol */
+}
+
+
+
+
+/* Personnaliser l'apparence des liens */
+a {
+    color: black; /* Définir la couleur des liens */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+}
+
+
+/* Styles pour le menu de navigation */
+
+.description {
+    justify-content: center;
+}
+.description ul{
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 150px;
+    
+}
+
+.description ul img {
+    width :80% ; 
+    height: auto;
+    border-radius: 30%;
+}
+
+.description ul li2 h1{
+    text-align: center;
+    color: #000000;
+}
+
+.description ul li2{
+    padding: 5px;
+    font-size: 150%; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    color: #000000; /* Couleur du texte */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */ 
+    text-align: center; /* Centre le texte horizontalement */
+    width: 50%;
+    padding-right: 150px;
+}
+
+
+/* Styles pour le titre */
+
+.titre p {
+    font-size: 200%; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    color: #000000; /* Couleur du texte */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */ 
+    padding: 50px;
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.projets, .projets2{
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+    margin-bottom: 50px;
+}
+.menu-item {
+    text-align: center; /* Centre le texte */
+    margin: 0px; /* Espacement entre les éléments */
+}
+
+.menu-item img {
+    width: 50%; /* Ajustez la largeur de l'image selon vos besoins */
+    height: auto; /* Ajuste automatiquement la hauteur en fonction de la largeur */
+}
+
+.menu-item p {
+    margin: 20px; /* Espacement entre l'image et le texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+
+
+/* Media query pour la mise en page responsive */
+@media screen and (max-width: 768px) {
+    .image-container img {
+        width: 100%; /* Réduire la largeur des images pour les écrans plus petits */
+    }
+}
+
+
+#contact {
+    padding: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
