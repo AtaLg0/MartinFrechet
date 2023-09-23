@@ -1,11 +1,17 @@
 /* styles.css */
 
+.a {
+    text-decoration-color: #fff;
+    
+}
+
 body {
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
-    background-image: url('backgroundNAV.png');
+    background-color: black;
     background-size: cover;
+    font-family: 'Questrial', sans-serif;
 }
 
 /* Style du header */
@@ -13,7 +19,7 @@ header {
     display: flex;
     align-items: center; /* Centre verticalement le contenu */
     justify-content: space-between;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Style du logo */
@@ -23,10 +29,12 @@ header {
     border-radius: 50%; /* Pour créer un effet de cercle pour le logo */
     margin-left: 30px;
     transition: transform 0.2s;
+    filter: brightness(0.5);
 }
 
 .logo img:hover {
     transform: scale(1.5); /* Grossissement de 10% lors du survol */
+    filter: brightness(1);
 }
 
 
@@ -50,6 +58,7 @@ header {
     margin-right: 20px;
     border-radius: 50%;
     transition: transform 0.2s;
+    filter: brightness(0.5);
 }
 
 .reseaux-sociaux li {
@@ -58,6 +67,7 @@ header {
 
 .reseaux-sociaux img:hover {
     transform: scale(1.5); /* Grossissement de 10% lors du survol */
+    filter: brightness(1);
 }
 
 
@@ -93,14 +103,14 @@ a {
 
 .description ul li2 h1{
     text-align: center;
-    color: #000000;
+    color: #ffffff;
 }
 
 .description ul li2{
     padding: 5px;
     font-size: 150%; /* Taille de la police */
     font-weight: bold; /* Texte en gras */
-    color: #000000; /* Couleur du texte */
+    color: #ffffff; /* Couleur du texte */
     text-transform: uppercase; /* Met le texte en majuscules */
     letter-spacing: 2px; /* Espacement entre les lettres */ 
     text-align: center; /* Centre le texte horizontalement */
@@ -111,30 +121,40 @@ a {
 
 /* Styles pour le titre */
 
-.titre p {
+.titre1, .titre2 p {
     font-size: 200%; /* Taille de la police */
     font-weight: bold; /* Texte en gras */
-    color: #000000; /* Couleur du texte */
+    color: #ffffff; /* Couleur du texte */
     text-transform: uppercase; /* Met le texte en majuscules */
     letter-spacing: 2px; /* Espacement entre les lettres */ 
     padding: 50px;
     text-align: center; /* Centre le texte horizontalement */
+    margin-top: 50px;
 }
 
-.projets, .projets2{
+.son123, .son456, .projets{
     display: flex;
     justify-content: center; /* Centre les éléments horizontalement */
     align-items: center; /* Centre les éléments verticalement */
     margin-bottom: 50px;
+    color: #fff;
 }
 .menu-item {
     text-align: center; /* Centre le texte */
     margin: 0px; /* Espacement entre les éléments */
+    filter: brightness(0.4);
 }
 
 .menu-item img {
     width: 50%; /* Ajustez la largeur de l'image selon vos besoins */
     height: auto; /* Ajuste automatiquement la hauteur en fonction de la largeur */
+    transition: transform 0.2s;
+}
+
+
+.menu-item:hover{
+    transform: scale(1.1);
+    filter: brightness(1);
 }
 
 .menu-item p {
@@ -142,7 +162,59 @@ a {
     font-weight: bold; /* Texte en gras */
 }
 
+/* Styles pour personnaliser la barre de lecture audio */
+audio {
+    width: 50%; /* Largeur de l'élément audio pour qu'il s'adapte à la largeur du conteneur */ 
+}
 
+/* Changer la taille du timer */
+audio::-webkit-media-controls-timeline {
+    width: 200%; /* Hauteur du timer (barre de progression) */
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    font-size: 15px; /* Taille de la police du timer */
+}
+
+audio::-webkit-media-controls-status-display {
+    display: none;
+}
+
+.projets, .projets p{
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+
+.contact {
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.reseaux2 img{
+    width: 10%;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    filter: brightness(0.5);
+}
+
+.reseaux2 img:hover {
+    transform: scale(1.2); /* Grossissement de 10% lors du survol */
+    filter: brightness(1);
+}
 
 /* Media query pour la mise en page responsive */
 @media screen and (max-width: 768px) {
@@ -152,57 +224,3 @@ a {
 }
 
 
-#contact {
-    padding: 40px;
-    text-align: center;
-}
-
-#contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-#contact p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-#contact label {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact textarea {
-    resize: vertical;
-}
-
-#contact button {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contact button:hover {
-    background-color: #0056b3;
-}
